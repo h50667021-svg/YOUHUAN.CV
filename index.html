@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尤欢 | 成本会计与数据分析师作品集</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+        
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdfa', 100: '#ccfbf1', 200: '#99f6e4', 300: '#5eead4', 
+                            400: '#2dd4bf', 500: '#14b8a6', 600: '#0d9488', 700: '#0f766e', 
+                            800: '#115e59', 900: '#134e4a', 950: '#042f2e'
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Microsoft YaHei', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                }
+            }
+        }
+    </style>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; color: #1f2937; }
+        h1, h2, h3, h4 { font-family: 'Merriweather', serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1); }
+        .animate-fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+<nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="#" onclick="navigate('home')" class="text-xl font-bold text-primary-700 tracking-tight flex items-center gap-2 hover:opacity-80 transition">
+                <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center text-white font-serif">Y</div>
+                YouHuan
+            </a>
+            <div class="hidden md:flex space-x-1">
+                <button onclick="navigate('home')" class="nav-btn px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-primary-50 text-gray-600">主页</button>
+                <button onclick="navigate('portfolio')" class="nav-btn px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-primary-50 text-gray-600">作品集</button>
+                <button onclick="navigate('about')" class="nav-btn px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-primary-50 text-gray-600">关于我</button>
+                <button onclick="navigate('blog')" class="nav-btn px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-primary-50 text-gray-600">学习笔记</button>
+            </div>
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-2 shadow-lg">
+        <button onclick="navigate('home')" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-primary-50 rounded">主页</button>
+        <button onclick="navigate('portfolio')" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-primary-50 rounded">作品集</button>
+        <button onclick="navigate('about')" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-primary-50 rounded">关于我</button>
+        <button onclick="navigate('blog')" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-primary-50 rounded">学习笔记</button>
+    </div>
+</nav>
+
+<main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+    <div id="page-home" class="page-content space-y-8 animate-fade-in">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sticky top-24 text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary-100 shadow-inner group">
+                        <img src="./profile.jpg" onerror="this.src='https://placehold.co/400x400/ccfbf1/0f766e?text=YH'" alt="尤欢头像" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold text-gray-900 mb-1">尤欢</h2>
+                    <p class="text-primary-600 font-medium text-sm mb-6">成本会计 / 数据分析师</p>
+                    
+                    <div class="space-y-4 text-left text-sm text-gray-600">
+                        <div class="flex items-center gap-3 hover:text-primary-700 transition">
+                            <i data-lucide="graduation-cap" class="w-4 h-4 text-primary-500 flex-shrink-0"></i>
+                            <span>马来西亚理科大学 (USM)</span>
+                        </div>
+                        <div class="flex items-center gap-3 hover:text-primary-700 transition">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary-500 flex-shrink-0"></i>
+                            <span>湖南 · 长沙</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-primary-500 flex-shrink-0"></i>
+                            <a href="mailto:1714862903@qq.com" class="hover:text-primary-600 truncate underline decoration-dotted">1714862903@qq.com</a>
+                        </div>
+                        <div class="flex items-center gap-3 hover:text-primary-700 transition">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary-500 flex-shrink-0"></i>
+                            <span>187-7489-6419</span>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="https://www.linkedin.com/in/youhuan" target="_blank" class="flex items-center justify-center gap-2 text-gray-500 hover:text-blue-600 transition group">
+                                <i data-lucide="linkedin" class="w-4 h-4 flex-shrink-0"></i>
+                                <span class="text-xs break-all">www.linkedin.com/in/youhuan</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <button onclick="navigate('contact')" class="w-full mt-6 bg-primary-600 text-white py-2 rounded-lg hover:bg-primary-700 transition shadow-md shadow-primary-200 font-medium">
+                        联系我
+                    </button>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 flex flex-col gap-6">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div class="aspect-video bg-gray-100 relative group cursor-pointer">
+                        <img src="https://placehold.co/800x450/e0e7ff/4f46e5?text=Video+Intro" class="w-full h-full object-cover opacity-90 transition group-hover:opacity-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg">
+                                <i data-lucide="play" class="w-8 h-8 text-white fill-current ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white font-medium drop-shadow-md bg-black/30 px-3 py-1 rounded-full text-sm backdrop-blur-sm">
+                            👋 30秒了解我
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-5 flex items-center gap-2">
+                        <i data-lucide="user" class="w-5 h-5 text-teal-600"></i> 个人简介
+                    </h3>
+                    
+                    <div class="space-y-5">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2 text-sm flex items-center gap-2">
+                                <span class="w-2 h-2 bg-teal-500 rounded-full flex-shrink-0"></span>
+                                专业技能
+                            </h4>
+                            <p class="text-gray-600 text-sm leading-relaxed pl-3.5 border-l-2 border-gray-100">
+                                成本核算、标准成本/差异分析、库存管理、固定资产管理、应付账款与费用稽核、预算管控、费控流程优化
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2 text-sm flex items-center gap-2">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></span>
+                                工具与编程
+                            </h4>
+                            <p class="text-gray-600 text-sm leading-relaxed pl-3.5 border-l-2 border-gray-100">
+                                SAP、Excel（透视表/Power Query/ VBA）、Power BI、Python（数据清洗/情绪分析/机器学习）、影刀 RPA
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2 text-sm flex items-center gap-2">
+                                <span class="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></span>
+                                证书与语言
+                            </h4>
+                            <p class="text-gray-600 text-sm leading-relaxed pl-3.5 border-l-2 border-gray-100">
+                                中级会计师；注册会计师通过3科；英语 CET-6（可作为工作语言）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sticky top-24">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 flex items-center gap-2">
+                        <i data-lucide="compass" class="w-5 h-5 text-primary-500"></i> 项目导航
+                    </h3>
+                    <p class="text-xs text-gray-400 mb-4">点击标签直达详细作品</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="navigate('portfolio')" class="text-left px-3 py-2 rounded-lg hover:bg-primary-50 hover:text-primary-700 text-gray-600 text-sm transition flex justify-between items-center group bg-gray-50/50">
+                            <span class="font-medium">⚡ VBA 自动化</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-primary-400 transition"></i>
+                        </button>
+                        <button onclick="navigate('portfolio')" class="text-left px-3 py-2 rounded-lg hover:bg-primary-50 hover:text-primary-700 text-gray-600 text-sm transition flex justify-between items-center group bg-gray-50/50">
+                            <span class="font-medium">🔄 Power Query 清洗</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-primary-400 transition"></i>
+                        </button>
+                        <button onclick="navigate('portfolio')" class="text-left px-3 py-2 rounded-lg hover:bg-primary-50 hover:text-primary-700 text-gray-600 text-sm transition flex justify-between items-center group bg-gray-50/50">
+                            <span class="font-medium">📊 Power BI 仪表盘</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-primary-400 transition"></i>
+                        </button>
+                        <button onclick="navigate('portfolio')" class="text-left px-3 py-2 rounded-lg hover:bg-primary-50 hover:text-primary-700 text-gray-600 text-sm transition flex justify-between items-center group bg-gray-50/50">
+                            <span class="font-medium">🐍 Python 建模</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-primary-400 transition"></i>
+                        </button>
+                        
+                        <div class="border-t border-gray-100 my-1"></div>
+                        
+                        <button onclick="navigate('portfolio')" class="text-left px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-700 text-gray-600 text-sm transition flex justify-between items-center group">
+                            <span>📦 库存分析</span>
+                            <i data-lucide="arrow-up-right" class="w-3 h-3 text-gray-300 group-hover:text-blue-400"></i>
+                        </button>
+                        <button onclick="navigate('portfolio')" class="text-left px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-700 text-gray-600 text-sm transition flex justify-between items-center group">
+                            <span>💰 应收账款分析</span>
+                            <i data-lucide="arrow-up-right" class="w-3 h-3 text-gray-300 group-hover:text-blue-400"></i>
+                        </button>
+                        <button onclick="navigate('portfolio')" class="text-left px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-700 text-gray-600 text-sm transition flex justify-between items-center group">
+                            <span>📉 费用/成本分析</span>
+                            <i data-lucide="arrow-up-right" class="w-3 h-3 text-gray-300 group-hover:text-blue-400"></i>
+                        </button>
+                        <button onclick="navigate('portfolio')" class="text-left px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-700 text-gray-600 text-sm transition flex justify-between items-center group">
+                            <span>🛡️ 预算管控</span>
+                            <i data-lucide="arrow-up-right" class="w-3 h-3 text-gray-300 group-hover:text-blue-400"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-primary-500 pl-4">专业领域概览</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div onclick="navigate('portfolio')" class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover-lift cursor-pointer group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-blue-50 rounded-lg text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                            <i data-lucide="calculator" class="w-6 h-6"></i>
+                        </div>
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-gray-300 group-hover:text-blue-500 transition"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">财务分析相关</h4>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">涵盖成本核算、差异分析、预算控制及应收/应付管理项目。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">成本</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">预算</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">AR/AP</span>
+                    </div>
+                </div>
+
+                <div onclick="navigate('portfolio')" class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-teal-500 hover-lift cursor-pointer group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-teal-50 rounded-lg text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition shadow-sm">
+                            <i data-lucide="database" class="w-6 h-6"></i>
+                        </div>
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-gray-300 group-hover:text-teal-500 transition"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">数据技术相关</h4>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">利用 Python, SQL, Power BI 解决复杂数据清洗与可视化问题。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">BI</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">VBA</span>
+                    </div>
+                </div>
+
+                <div onclick="navigate('portfolio')" class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-purple-500 hover-lift cursor-pointer group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-purple-50 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition shadow-sm">
+                            <i data-lucide="book-open" class="w-6 h-6"></i>
+                        </div>
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-gray-300 group-hover:text-purple-500 transition"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">毕业设计</h4>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">基于机器学习模型研究文本信号对盈利预测的增量作用</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">机器学习</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">数据清洗</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">情绪分析</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-about" class="page-content hidden space-y-8 animate-fade-in">
+        
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+                <i data-lucide="user" class="w-6 h-6 text-primary-600"></i> 职业概述
+            </h2>
+            <p class="text-gray-700 leading-relaxed text-justify">
+                <strong>中级会计师</strong>，具备 <strong>4年</strong> 制造业成本核算、成本差异分析及应付账款管理经验，熟练使用 <strong>SAP FI/CO</strong> 模块。擅长库存与料号异常定位、固定资产账实管理及费用稽核。主导预付款清理并追回重复付款超 <strong>RMB 700,000</strong>，参与费控系统上线（合同–费控–ERP 三系统集成）。具备 <strong>Excel/PQ/VBA、Power BI 与 Python</strong> 的数据分析与流程优化能力。
+            </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+                <i data-lucide="graduation-cap" class="w-6 h-6 text-primary-600"></i> 学历背景
+            </h3>
+            <div class="space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between sm:items-start group p-2 hover:bg-gray-50 rounded-lg transition">
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition">马来西亚理科大学 (USM)</h4>
+                        <p class="text-gray-600 font-medium">硕士 | 商业分析 (Business Analytics)</p>
+                        <p class="text-sm text-gray-500 mt-1 leading-relaxed">
+                            QS排名 #134 | 主修课程：统计学，数据可视化（Power BI、Tableau），Python，机器学习，文本挖掘及情绪分析，财务建模分析
+                        </p>
+                    </div>
+                    <div class="text-primary-600 font-semibold bg-primary-50 px-3 py-1 rounded-full text-sm mt-2 sm:mt-0 w-fit flex-shrink-0">
+                        2025.03 - 2026.03
+                    </div>
+                </div>
+                
+                <hr class="border-dashed border-gray-200">
+
+                <div class="flex flex-col sm:flex-row justify-between sm:items-start group p-2 hover:bg-gray-50 rounded-lg transition">
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition">湖南财政经济学院</h4>
+                        <p class="text-gray-600 font-medium">本科 | 会计学</p>
+                        <p class="text-sm text-gray-500 mt-1 leading-relaxed">
+                            主修课程：会计、财务成本管理、税法、审计、财务报表分析、账务实操、企业模拟经营等
+                        </p>
+                    </div>
+                    <div class="text-gray-500 bg-gray-100 px-3 py-1 rounded-full text-sm mt-2 sm:mt-0 w-fit flex-shrink-0">
+                        2016.09 - 2020.07
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+             <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+                <i data-lucide="cpu" class="w-6 h-6 text-primary-600"></i> 技能技术栈
+             </h3>
+             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span> 核心财务
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg border border-blue-100">中级会计师</span>
+                        <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">成本核算</span>
+                        <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">差异分析</span>
+                        <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">预算管控</span>
+                        <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">SAP FI/CO</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-teal-500 rounded-full"></span> 数据工具
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-teal-50 text-teal-700 text-sm font-medium rounded-lg border border-teal-100">Power BI</span>
+                        <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Power Query (M)</span>
+                        <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Python (Pandas)</span>
+                        <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Excel VBA</span>
+                        <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">影刀 RPA</span>
+                    </div>
+                </div>
+                 <div>
+                    <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-purple-500 rounded-full"></span> 语言能力
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg border border-purple-100">英语 CET-6</span>
+                        <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">普通话 (母语)</span>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+                <i data-lucide="briefcase" class="w-6 h-6 text-primary-600"></i> 工作经历
+            </h3>
+            
+            <div class="relative border-l-2 border-gray-200 ml-3 space-y-10">
+                
+                <div class="ml-6 relative">
+                    <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-primary-500 border-4 border-white shadow-sm ring-4 ring-primary-50"></span>
+                    
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                        <h4 class="text-lg font-bold text-gray-900">会计专员</h4>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded">2021.12 - 2024.08</span>
+                    </div>
+                    <div class="text-primary-700 font-medium mb-4">东莞长城开发科技有限公司</div>
+                    
+                    <div class="space-y-4 text-sm text-gray-600 leading-relaxed">
+                        
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-1 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full"></span> 成本核算与成本分析
+                            </h5>
+                            <ul class="list-disc list-outside ml-4 space-y-1">
+                                <li>使用 <strong>SAP FI/CO</strong> 完成材料、人工、制造费用的月度结转，确保多业务线按期关账；</li>
+                                <li>独立编制定产量版/销量版报表，对材料成本、制造费用及产能利用率进行差异分析，为区域管理层提供毛利改善建议；</li>
+                                <li>跟踪库存结构、异常料号、错误 BOM 与返工返修成本，定位成本异常的材料/工时/费用根因并推动整改；</li>
+                                <li>构建成本费用分解逻辑模型，提高异常成本识别速度，并基于 Excel 建立标准化分析模板，提高成本分析效率；</li>
+                                <li>编制智能产品事业部年度成本及费用预算，整合生产与运营部门数据，并提供预算执行差异分析支持管理层决策。</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-1 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full"></span> 固定资产管理
+                            </h5>
+                            <ul class="list-disc list-outside ml-4 space-y-1">
+                                <li>处理固定资产及装修工程入账、折旧与摊销、报废/报损，确保账面与实物一致，并监督出售资产定价与处置流程；</li>
+                                <li>编制年度财务报表中固定资产附注，与内外部审计团队对接，提供固定资产变动与折旧政策执行情况的透明度；</li>
+                                <li>清理常年挂账的异常折旧资产，推动低值易耗品与固定资产报废流程标准化，实现账实闭环。</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-blue-50 p-3 rounded-lg border border-blue-100">
+                            <h5 class="font-bold text-blue-800 mb-1">💡 应付与费用控制 (高绩效成果)</h5>
+                            <p>
+                                建立预付款清理流程并完成历史账项清理：自发从 <strong>0–1</strong> 设计并实施预付款清理制度，核对合同与付款凭证，识别并追回历史重复付款 <strong>RMB 700,000+</strong>；该流程后续被公司推广为区域标准操作流程，获得加薪转正与绩效认可。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ml-6 relative">
+                    <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-white shadow-sm"></span>
+                    
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                        <h4 class="text-lg font-bold text-gray-900">应付会计及费控系统实施对接人</h4>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded">2020.03 - 2021.03</span>
+                    </div>
+                    <div class="text-primary-700 font-medium mb-4">OPPO 广东移动通信有限公司</div>
+                    
+                    <div class="space-y-4 text-sm text-gray-600 leading-relaxed">
+                        
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-1 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full"></span> 应付与费用审核
+                            </h5>
+                            <p class="pl-4 border-l-2 border-gray-100">
+                                负责东南亚区域营销类款项审核，确保费用支出的合理性、正确性及税务合规性；对预付账款进行稽核与清理，核对付款依据与合同条款，防止重复或超额付款；定期输出费用分析报告，为区域预算执行及费用优化提供支持。
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-1 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full"></span> 费控系统上线项目
+                            </h5>
+                            <ul class="list-disc list-outside ml-4 space-y-1">
+                                <li>梳理应付业务流程，<strong>优化审批链路</strong>，推动费控系统上线并实现 ERP 自动立账闭环；</li>
+                                <li>对接合同管理系统、费控系统、ERP 三系统数据，实现业务流与财务流<strong>自动匹配</strong>；</li>
+                                <li>负责编写测试用例、开展 UAT 测试并<strong>组织用户培训</strong>，上线后凭证异常显著减少；</li>
+                                <li>项目按期高质量完成并投入使用，获领导年终高绩效评价。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+                <i data-lucide="folder-kanban" class="w-6 h-6 text-primary-600"></i> 项目经历
+            </h3>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100 hover:border-primary-200 hover:bg-white hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">制造业库存呆滞预警分析</h4>
+                        <i data-lucide="bar-chart-2" class="w-5 h-5 text-primary-500"></i>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-3">工具：Power BI, SAP, Excel</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        针对工厂库存积压问题，搭建 Power BI 动态看板。连接 SAP 导出数据，通过 DAX 计算库龄分布，识别超过 365 天的呆滞物料，辅助管理层制定去库存策略，降低资金占用。
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100 hover:border-primary-200 hover:bg-white hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">月度费用预测模型</h4>
+                        <i data-lucide="code-2" class="w-5 h-5 text-yellow-600"></i>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-3">工具：Python (Pandas, Scikit-learn)</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        利用 Python 对历史 5 年的管理费用数据进行清洗与特征工程。构建时间序列回归模型，预测下一季度的费用趋势，为年度预算编制提供量化依据，预测准确率提升至 85%。
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100 hover:border-primary-200 hover:bg-white hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">月度费用报表自动生成工具</h4>
+                        <i data-lucide="file-spreadsheet" class="w-5 h-5 text-green-600"></i>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-3">工具：Excel VBA</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        编写 Excel VBA 宏，自动抓取多部门费用明细，进行分类汇总并生成对比图表。将原需 4 小时的人工制表时间缩短至 5 分钟，显著提升了财务月结效率。
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100 hover:border-primary-200 hover:bg-white hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">预付款清理与流程重塑</h4>
+                        <i data-lucide="file-check" class="w-5 h-5 text-green-600"></i>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-3">角色：项目负责人</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        针对常年挂账的预付款项进行专项清理。通过与采购、供应商三方对账，重新梳理付款审批流程（SOP），增加了合同节点控制，从源头规避了坏账风险。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-portfolio" class="page-content hidden space-y-8 animate-fade-in">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">我的项目作品集</h2>
+            <p class="text-gray-500">融合财务专业与数据技术的实战案例</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button onclick="filterProjects('all')" class="filter-btn active px-5 py-2 rounded-full text-sm font-medium transition shadow-sm border border-transparent bg-primary-600 text-white">全部</button>
+            <button onclick="filterProjects('finance')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm border border-gray-200 bg-white text-gray-600 hover:text-primary-600">财务分析</button>
+            <button onclick="filterProjects('data')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm border border-gray-200 bg-white text-gray-600 hover:text-primary-600">数据工具</button>
+            <button onclick="filterProjects('grad')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm border border-gray-200 bg-white text-gray-600 hover:text-primary-600">毕业设计</button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8" id="projects-grid">
+            
+            <div class="project-card group" data-category="data finance">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Inventory+Analysis" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-sm">库存分析</div>
+                        <div class="absolute top-4 left-20 bg-green-600 text-white text-xs px-2 py-1 rounded shadow-sm">Power BI</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">制造业呆滞库存可视化与预警分析</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">利用 Power BI 连接 SAP 导出的库存账龄表，建立动态仪表盘，识别超期库存（>365天），辅助管理层制定清理计划。</p>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Power Query</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">DAX</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看详情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group" data-category="data finance">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=VBA+Automation" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">VBA</div>
+                        <div class="absolute top-4 left-16 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-sm">费用分析</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">月度费用报表一键自动生成工具</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">编写 Excel VBA 宏，自动抓取多部门费用明细，进行分类汇总并生成对比图表。将原需 4 小时的人工制表时间缩短至 5 分钟。</p>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Excel</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Macro</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看代码逻辑 <i data-lucide="code" class="w-4 h-4 ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group" data-category="finance">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Cost+Variance" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-red-600 text-white text-xs px-2 py-1 rounded shadow-sm">成本分析</div>
+                        <div class="absolute top-4 left-20 bg-green-600 text-white text-xs px-2 py-1 rounded shadow-sm">Power Query</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">BOM 标准成本与实际成本差异根因追踪</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">使用 Power Query 清洗 SAP CO 模块导出的海量生产订单数据，快速定位材料用量差异和价格差异的来源料号。</p>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">SAP CO</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">ETL</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看详情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group" data-category="data">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Python+Prediction" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-yellow-600 text-white text-xs px-2 py-1 rounded shadow-sm">Python</div>
+                        <div class="absolute top-4 left-20 bg-indigo-600 text-white text-xs px-2 py-1 rounded shadow-sm">预算管控</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">基于时间序列的下一季度费用预测模型</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">利用 Python (Pandas, Statsmodels) 对历史5年的管理费用进行分析，建立 ARIMA 模型预测下一季度费用趋势。</p>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Pandas</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Scikit-learn</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看 Notebook <i data-lucide="external-link" class="w-4 h-4 ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group" data-category="grad data">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Graduation+Design" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">毕业设计</div>
+                        <div class="absolute top-4 left-20 bg-teal-600 text-white text-xs px-2 py-1 rounded shadow-sm">机器学习</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">基于机器学习模型研究文本信号对盈利预测的增量作用</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">商业分析硕士毕业项目。通过 Python 对财报文本进行清洗与情绪分析，探究非财务文本信息能否为传统财务指标模型提供增量的预测价值。</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">机器学习</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据清洗</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">情绪分析</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Python</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看论文摘要 <i data-lucide="file-text" class="w-4 h-4 ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="page-blog" class="page-content hidden space-y-8 animate-fade-in">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">学习笔记 & 技术沉淀</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <a href="https://github.com/youhuan" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-1 rounded inline-block">VBA</span>
+                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-purple-500 transition"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">VBA 实战：如何遍历文件夹合并100个Excel表</h4>
+                <p class="text-sm text-gray-500 mb-4 line-clamp-3">
+                    【点击测试】记录了使用 Dir 函数和 Loop 循环实现多工作簿合并的代码逻辑，适用于财务月结场景。
+                </p>
+                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
+            </a>
+
+            <a href="#" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded inline-block">Power Query</span>
+                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-green-500 transition"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">Power Query M语言：处理不规范的费用报销单</h4>
+                <p class="text-sm text-gray-500 mb-4 line-clamp-3">
+                    解决了表头多行、合并单元格等常见的财务Excel数据清洗难题。（此处请填入链接）
+                </p>
+                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
+            </a>
+
+            <a href="#" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-bold text-yellow-600 bg-yellow-50 px-2 py-1 rounded inline-block">Python</span>
+                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">Python Pandas：库存库龄分析的高级筛选</h4>
+                <p class="text-sm text-gray-500 mb-4 line-clamp-3">
+                    比 Excel 透视表更灵活的筛选方式，快速计算各库龄段的库存金额占比。（此处请填入链接）
+                </p>
+                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
+            </a>
+
+             <a href="#" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded inline-block">应收账款</span>
+                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-blue-500 transition"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">DSO (应收账款周转天数) 的计算与优化策略</h4>
+                <p class="text-sm text-gray-500 mb-4 line-clamp-3">
+                    关于如何通过财务数据分析识别逾期客户并制定催收优先级的思考。（此处请填入链接）
+                </p>
+                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
+            </a>
+
+             <a href="#" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-1 rounded inline-block">毕业设计</span>
+                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-pink-500 transition"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">毕业设计开题：大数据背景下的财务风险管控</h4>
+                <p class="text-sm text-gray-500 mb-4 line-clamp-3">
+                    记录了毕业设计的选题思路、文献综述整理以及初步的模型构建框架。（此处请填入链接）
+                </p>
+                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
+            </a>
+        </div>
+    </div>
+
+</main>
+
+<footer class="bg-white border-t border-gray-200 mt-auto py-6">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-500">
+        <p>&copy; 2024 YouHuan. 保留所有权利。</p>
+        <p class="mt-1">基于 Tailwind CSS 设计 | 成本会计作品集</p>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+
+    function navigate(pageId) {
+        document.querySelectorAll('.page-content').forEach(el => el.classList.add('hidden'));
+        const target = document.getElementById('page-' + pageId);
+        if(target) {
+            target.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.classList.remove('text-primary-600', 'bg-primary-50');
+            btn.classList.add('text-gray-600');
+        });
+        const navMap = { 'home': '主页', 'portfolio': '作品集', 'about': '关于我', 'blog': '学习笔记' };
+        const btnText = navMap[pageId];
+        if(btnText) {
+            const btns = Array.from(document.querySelectorAll('.nav-btn'));
+            const activeBtn = btns.find(b => b.textContent.includes(btnText));
+            if(activeBtn) {
+                activeBtn.classList.add('text-primary-600', 'bg-primary-50');
+                activeBtn.classList.remove('text-gray-600');
+            }
+        }
+    }
+
+    navigate('home');
+
+    function filterProjects(category) {
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach(card => {
+            const cardCats = card.getAttribute('data-category');
+            if (category === 'all' || cardCats.includes(category)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => {
+            if (btn.getAttribute('onclick').includes(`'${category}'`)) {
+                btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+                btn.classList.add('bg-primary-600', 'text-white', 'border-transparent');
+            } else {
+                btn.classList.remove('bg-primary-600', 'text-white', 'border-transparent');
+                btn.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
