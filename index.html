@@ -89,7 +89,7 @@
                     <div class="space-y-4 text-left text-sm text-gray-600">
                         <div class="flex items-center gap-3 hover:text-primary-700 transition">
                             <i data-lucide="graduation-cap" class="w-4 h-4 text-primary-500 flex-shrink-0"></i>
-                            <span>马来西亚理科大学 (USM)</span>
+                            <span>马来西亚理科大学 (硕士)</span>
                         </div>
                         <div class="flex items-center gap-3 hover:text-primary-700 transition">
                             <i data-lucide="map-pin" class="w-4 h-4 text-primary-500 flex-shrink-0"></i>
@@ -288,27 +288,102 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+            <div class="project-card group" data-category="data finance">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/fffbeb/d97706?text=Cost+Structure+BI" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-yellow-500 text-white text-xs px-2 py-1 rounded shadow-sm">Power BI</div>
+                        <div class="absolute top-4 left-20 bg-red-500 text-white text-xs px-2 py-1 rounded shadow-sm">成本控制</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
+                            制造业成本结构可视化分析仪表盘
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            针对传统成本报表数据维度单一的问题，搭建动态 BI 看板。实现对料、工、费的结构拆解与趋势追踪，支持按“车间-产品-时间”多维度下钻，快速定位成本异常波动根源。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据建模</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">DAX</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">可视化</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
+                        <a href="./cost_dashboard_demo.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
+                            <i data-lucide="presentation" class="w-4 h-4 mr-2"></i> 查看 Dashboard 演示 (PDF)
+                        </a>
+                        
+                        <a href="./cost_analysis.pdf" class="text-gray-500 font-medium text-sm hover:text-primary-600 transition flex items-center">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i> 下载步骤
+                        </a>
+                    </div>
+                </div>
+            </div>
             
             <div class="project-card group" data-category="data finance">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
                     <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Inventory+Analysis" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-sm">库存分析</div>
-                        <div class="absolute top-4 left-20 bg-green-600 text-white text-xs px-2 py-1 rounded shadow-sm">Power BI</div>
+                        <img src="https://placehold.co/600x400/fff7ed/ea580c?text=Sales+Analytics" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-2 py-1 rounded shadow-sm">Power BI</div>
+                        <div class="absolute top-4 left-20 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-sm">销售分析</div>
                     </div>
                     <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">制造业呆滞库存可视化与预警分析</h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">利用 Power BI 连接 SAP 导出的库存账龄表，建立动态仪表盘，识别超期库存（>365天），辅助管理层制定清理计划。</p>
-                        <div class="flex gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Power Query</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">DAX</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
+                            产品销售多维度分析与数据建模实战
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            基于百万行级销售流水数据，完成从 ETL 清洗、数据建模到可视化的全流程。运用 DAX 实现同比/环比、帕累托分析及客户留存率计算，并通过动态交互仪表盘辅助制定营销策略。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">DAX 建模</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据清洗</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">商业洞察</span>
                         </div>
                     </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
-                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看详情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
+                        <a href="./sales_project_report.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看分析思路与报表演示 (PDF)
+                        </a>
+                        
+                        <a href="./sales_analysis.pbix" class="text-gray-500 font-medium text-sm hover:text-primary-600 transition flex items-center">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i> 下载 .pbix 源文件
+                        </a>
                     </div>
                 </div>
             </div>
+            <div class="project-card group" data-category="finance data">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/fee2e2/b91c1c?text=AR+Risk+Management" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-red-600 text-white text-xs px-2 py-1 rounded shadow-sm">风险预警</div>
+                        <div class="absolute top-4 left-20 bg-yellow-500 text-white text-xs px-2 py-1 rounded shadow-sm">Power BI</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
+                            应收账款(AR)风险预警与账龄分析模型
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            针对企业回款周期长、坏账风险高的问题，搭建动态风控看板。利用 DAX 计算 DSO (销售变现天数) 及逾期账龄分布，自动标记高风险客户，辅助财务部门精准制定催收策略。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">账龄分析</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">DSO计算</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">风控模型</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
+                        <a href="./ar_risk_report.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看业务逻辑与看板演示 (PDF)
+                        </a>
+                        
+                        <a href="./ar_risk_analysis.pbix" class="text-gray-500 font-medium text-sm hover:text-primary-600 transition flex items-center">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i> 下载 .pbix 源文件
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+           
 
             <div class="project-card group" data-category="data finance">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
