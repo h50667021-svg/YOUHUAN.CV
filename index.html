@@ -383,7 +383,41 @@
                 </div>
             </div>
 
-           
+           <div class="project-card group" data-category="data finance">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/e0e7ff/4338ca?text=NLP+Project" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-indigo-600 text-white text-xs px-2 py-1 rounded shadow-sm">课程作业</div>
+                        <div class="absolute top-4 left-20 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">Python NLP</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
+                            挖掘shopee reviews文本分析并预测的研究
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            商业分析课程期末项目。利用 Python 对网站评论进行文本清洗与情感分析，探索和挖掘并分析文本。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据挖掘</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">情感分析</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">回归建模</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
+                        <a href="./text_mining_thesis.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看项目报告 (PDF)
+                        </a>
+                        
+                        <a href="./project_assets.zip" class="text-indigo-600 font-medium text-sm hover:underline flex items-center transition">
+                            <i data-lucide="package" class="w-4 h-4 mr-2"></i> 下载代码与数据包 (ZIP)
+                        </a>
+                        
+                        <div class="text-xs text-gray-400 mt-1 pl-6">
+                            含 Python 源码、清洗后数据及流程图
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="project-card group" data-category="data finance">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
@@ -442,47 +476,9 @@
                 </div>
             </div>
 
-            <div class="project-card group" data-category="finance">
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
-                    <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Cost+Variance" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-red-600 text-white text-xs px-2 py-1 rounded shadow-sm">成本分析</div>
-                        <div class="absolute top-4 left-20 bg-green-600 text-white text-xs px-2 py-1 rounded shadow-sm">Power Query</div>
-                    </div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">BOM 标准成本与实际成本差异根因追踪</h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">使用 Power Query 清洗 SAP CO 模块导出的海量生产订单数据，快速定位材料用量差异和价格差异的来源料号。</p>
-                        <div class="flex gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">SAP CO</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">ETL</span>
-                        </div>
-                    </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
-                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看详情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
-                    </div>
-                </div>
-            </div>
+            
 
-            <div class="project-card group" data-category="data">
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
-                    <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Python+Prediction" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-yellow-600 text-white text-xs px-2 py-1 rounded shadow-sm">Python</div>
-                        <div class="absolute top-4 left-20 bg-indigo-600 text-white text-xs px-2 py-1 rounded shadow-sm">预算管控</div>
-                    </div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">基于时间序列的下一季度费用预测模型</h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">利用 Python (Pandas, Statsmodels) 对历史5年的管理费用进行分析，建立 ARIMA 模型预测下一季度费用趋势。</p>
-                        <div class="flex gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Pandas</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Scikit-learn</span>
-                        </div>
-                    </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
-                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看 Notebook <i data-lucide="external-link" class="w-4 h-4 ml-1"></i></a>
-                    </div>
-                </div>
-            </div>
+            
 
             <div class="project-card group" data-category="grad data">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
@@ -502,7 +498,7 @@
                         </div>
                     </div>
                     <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
-                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看论文摘要 <i data-lucide="file-text" class="w-4 h-4 ml-1"></i></a>
+                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看论文摘要（投稿准备中，暂时不放） <i data-lucide="file-text" class="w-4 h-4 ml-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -567,14 +563,21 @@
 
     <div id="page-about" class="page-content hidden space-y-8 animate-fade-in">
         
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
-                <i data-lucide="user" class="w-6 h-6 text-primary-600"></i> 职业概述
-            </h2>
-            <p class="text-gray-700 leading-relaxed text-justify">
-                <strong>中级会计师</strong>，具备 <strong>4年</strong> 制造业成本核算、成本差异分析及应付账款管理经验，熟练使用 <strong>SAP FI/CO</strong> 模块。擅长库存与料号异常定位、固定资产账实管理及费用稽核。主导预付款清理并追回重复付款超 <strong>RMB 700,000</strong>，参与费控系统上线（合同–费控–ERP 三系统集成）。具备 <strong>Excel/PQ/VBA、Power BI 与 Python</strong> 的数据分析与流程优化能力。
-            </p>
-        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
+                        <i data-lucide="briefcase" class="w-6 h-6 text-primary-600"></i> 职业概述
+                    </h3>
+                    
+                    <p class="text-gray-600 text-sm leading-7 text-justify">
+                        具备<span class="font-bold text-gray-800">商业分析硕士</span>和制造业财务复合背景的成本会计，拥有四年成本核算、成本差异分析及应付账款管理经验，熟练使用 SAP。
+                        <br><br>
+                        擅长将财务逻辑与数据技术结合，利用 Excel / Power Query / Power BI 与 Python 构建自动化流程与标准化分析模型，显著提升成本分析效率与预算管理质量。
+                        <br><br>
+                        曾独立设计预付款清理机制并追回历史重复付款人民币 <span class="font-bold text-red-600">70W+</span>，清理供应商未开票少开票 <span class="font-bold text-red-600">100W+</span>，成功推动流程优化在区域内复制。
+                        <br><br>
+                        具备跨系统（合同–费控–ERP）业务理解及落地经验，同时具备<span class="font-bold text-gray-800">中级会计职称</span>，能够在财务运营、成本管理与数据洞察之间搭建有效“桥梁”，为管理层提供降本增效与流程优化建议。
+                    </p>
+                </div>
 
         <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
             <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center gap-2">
@@ -728,25 +731,28 @@
             </h3>
             
             <div class="grid md:grid-cols-2 gap-6">
+                
                 <div class="bg-gray-50 p-5 rounded-lg border border-gray-100 hover:border-primary-200 hover:bg-white hover:shadow-md transition">
                     <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-bold text-gray-900">制造业库存呆滞预警分析</h4>
-                        <i data-lucide="bar-chart-2" class="w-5 h-5 text-primary-500"></i>
+                        <h4 class="font-bold text-gray-900">费控系统上线与多系统集成</h4>
+                        <i data-lucide="layers" class="w-5 h-5 text-indigo-600"></i>
                     </div>
-                    <p class="text-xs text-gray-500 mb-3">工具：Power BI, SAP, Excel</p>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        针对工厂库存积压问题，搭建 Power BI 动态看板。连接 SAP 导出数据，通过 DAX 计算库龄分布，识别超过 365 天的呆滞物料，辅助管理层制定去库存策略，降低资金占用。
-                    </p>
+                    <p class="text-xs text-gray-500 mb-3">角色：核心实施骨干 | 成果：凭证异常显著减少</p>
+                    <ul class="text-sm text-gray-600 leading-relaxed list-disc list-outside ml-4 space-y-1">
+                        <li><strong>流程重塑：</strong>梳理应付业务流程，优化审批链路，推动费控系统上线并实现 ERP 自动立账闭环；</li>
+                        <li><strong>三单匹配：</strong>对接合同管理系统、费控系统、ERP 三系统数据，实现业务流与财务流自动匹配；</li>
+                        <li><strong>落地实施：</strong>负责编写测试用例、开展 UAT 测试并组织用户培训，确保系统按期高质量上线。</li>
+                    </ul>
                 </div>
 
                 <div class="bg-gray-50 p-5 rounded-lg border border-gray-100 hover:border-primary-200 hover:bg-white hover:shadow-md transition">
                     <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-bold text-gray-900">月度费用预测模型</h4>
-                        <i data-lucide="code-2" class="w-5 h-5 text-yellow-600"></i>
+                        <h4 class="font-bold text-gray-900">固定资产全生命周期治理</h4>
+                        <i data-lucide="box" class="w-5 h-5 text-blue-600"></i>
                     </div>
-                    <p class="text-xs text-gray-500 mb-3">工具：Python (Pandas, Scikit-learn)</p>
+                    <p class="text-xs text-gray-500 mb-3">角色：资产会计 | 成果：顺利通过年度审计</p>
                     <p class="text-sm text-gray-600 leading-relaxed">
-                        利用 Python 对历史 5 年的管理费用数据进行清洗与特征工程。构建时间序列回归模型，预测下一季度的费用趋势，为年度预算编制提供量化依据，预测准确率提升至 85%。
+                        针对制造业资产庞杂痛点，建立“入账-盘点-处置”闭环管理体系。清理常年挂账的异常折旧资产，规范低值易耗品与报废流程。主导年度固定资产盘点，确保账实相符，极大提升了财务报表附注的准确性与审计合规度。
                     </p>
                 </div>
 
@@ -755,7 +761,7 @@
                         <h4 class="font-bold text-gray-900">月度费用报表自动生成工具</h4>
                         <i data-lucide="file-spreadsheet" class="w-5 h-5 text-green-600"></i>
                     </div>
-                    <p class="text-xs text-gray-500 mb-3">工具：Excel VBA</p>
+                    <p class="text-xs text-gray-500 mb-3">工具：Excel VBA | 成果：效率提升 98%</p>
                     <p class="text-sm text-gray-600 leading-relaxed">
                         编写 Excel VBA 宏，自动抓取多部门费用明细，进行分类汇总并生成对比图表。将原需 4 小时的人工制表时间缩短至 5 分钟，显著提升了财务月结效率。
                     </p>
@@ -763,21 +769,44 @@
 
                 <div class="bg-gray-50 p-5 rounded-lg border border-gray-100 hover:border-primary-200 hover:bg-white hover:shadow-md transition">
                     <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-bold text-gray-900">预付款清理与流程重塑</h4>
-                        <i data-lucide="file-check" class="w-5 h-5 text-green-600"></i>
+                        <h4 class="font-bold text-gray-900">预付款专项清理与流程重塑</h4>
+                        <i data-lucide="file-check" class="w-5 h-5 text-red-600"></i>
                     </div>
-                    <p class="text-xs text-gray-500 mb-3">角色：项目负责人</p>
+                    <p class="text-xs text-gray-500 mb-3">
+                        成果：<span class="text-red-600 font-bold">追回资金 70W+</span> | 角色：项目负责人
+                    </p>
                     <p class="text-sm text-gray-600 leading-relaxed">
-                        针对常年挂账的预付款项进行专项清理。通过与采购、供应商三方对账，重新梳理付款审批流程（SOP），增加了合同节点控制，从源头规避了坏账风险。
+                        针对常年挂账的预付款项进行专项清理。自发从 0-1 设计清理机制，通过与采购、供应商三方对账，识别历史重复付款并成功追回。重新梳理付款审批 SOP，从源头规避了坏账风险，该流程被推广为区域标准。
                     </p>
                 </div>
+
             </div>
         </div>
     </div>
-
     <div id="page-blog" class="page-content hidden space-y-8 animate-fade-in">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8">学习笔记 & 技术沉淀</h2>
-        <a href="./Power_Query_Master_Notes.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-teal-500">
+
+    <h2 class="text-3xl font-bold text-gray-900 mb-8 mt-16 flex items-center gap-3">
+            <i data-lucide="book-open" class="w-8 h-8 text-primary-600"></i>
+            学习笔记 & 技术沉淀
+        </h2>
+
+        <div class="grid grid-cols-1 gap-4">
+            <a href="./ba_core_notes.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-violet-500">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-bold text-violet-600 bg-violet-50 px-2 py-1 rounded inline-block">BA 方法论</span>
+                    <i data-lucide="layers" class="w-4 h-4 text-gray-300 group-hover:text-violet-500 transition"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">
+                    商业分析 (Business Analytics) 核心知识体系
+                </h4>
+                <p class="text-sm text-gray-500 mb-2 line-clamp-2">
+                    🧠 <strong>理论基石：</strong>系统梳理 BA 核心框架。涵盖从描述性分析到规范性分析的演进、CRISP-DM 标准流程、以及统计学方法在商业决策中的落地逻辑。
+                </p>
+                <div class="flex items-center text-sm text-primary-600 font-medium hover:underline">
+                    <i data-lucide="file-text" class="w-4 h-4 mr-1"></i> 阅读核心笔记 (PDF)
+                </div>
+            </a>
+            <a href="./Power_Query_Master_Notes.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-teal-500">
                 <div class="flex justify-between items-start mb-2">
                     <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded inline-block">Power Query</span>
                     <i data-lucide="package" class="w-4 h-4 text-gray-300 group-hover:text-teal-500 transition"></i>
@@ -785,14 +814,15 @@
                 <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">
                     Power Query 数据清洗实战笔记 (12篇合集)
                 </h4>
-                <p class="text-sm text-gray-500 mb-4 line-clamp-3">
+                <p class="text-sm text-gray-500 mb-2 line-clamp-2">
                     🧩 <strong>系统化总结：</strong>整理了 12 篇实战笔记，涵盖 M 语言基础、多表合并、逆透视、模糊匹配及增量刷新等高阶技巧。
                 </p>
                 <div class="flex items-center text-sm text-primary-600 font-medium hover:underline">
                     <i data-lucide="file-text" class="w-4 h-4 mr-1"></i> 点击查看完整合集
                 </div>
             </a>
-        <a href="./excel_financial_notes.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-green-500">
+
+            <a href="./excel_financial_notes.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-green-500">
                 <div class="flex justify-between items-start mb-2">
                     <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded inline-block">Excel 进阶</span>
                     <i data-lucide="download" class="w-4 h-4 text-gray-300 group-hover:text-green-500 transition"></i>
@@ -800,14 +830,15 @@
                 <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">
                     Excel 财务分析与统计建模笔记
                 </h4>
-                <p class="text-sm text-gray-500 mb-4 line-clamp-3">
-                    📚 <strong>核心知识点：</strong>涵盖高阶函数 (SUMPRODUCT, LOOKUP)、Power Query 数据清洗、回归分析/方差分析等统计建模方法，以及销售/人事/财务场景实战总结。
+                <p class="text-sm text-gray-500 mb-2 line-clamp-2">
+                    📚 <strong>核心知识点：</strong>涵盖高阶函数 (SUMPRODUCT, LOOKUP)、Power Query 数据清洗、回归分析/方差分析等统计建模方法。
                 </p>
                 <div class="flex items-center text-sm text-primary-600 font-medium hover:underline">
                     <i data-lucide="file-spreadsheet" class="w-4 h-4 mr-1"></i> 查看/下载 PDF 笔记
                 </div>
             </a>
-        <a href="./power_bi_notes.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-yellow-500">
+
+            <a href="./power_bi_notes.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-yellow-500">
                 <div class="flex justify-between items-start mb-2">
                     <span class="text-xs font-bold text-yellow-600 bg-yellow-50 px-2 py-1 rounded inline-block">Power BI 进阶</span>
                     <i data-lucide="download" class="w-4 h-4 text-gray-300 group-hover:text-yellow-500 transition"></i>
@@ -815,79 +846,82 @@
                 <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">
                     Power BI 数据建模与 DAX 函数笔记
                 </h4>
-                <p class="text-sm text-gray-500 mb-4 line-clamp-3">
-                    📊 <strong>核心技能：</strong>详解 DAX 核心函数 (CALCULATE, 时间智能)、Power Query M 语言清洗技巧、多维数据建模逻辑，以及 20+ 种可视化图表的应用场景选择指南。
+                <p class="text-sm text-gray-500 mb-2 line-clamp-2">
+                    📊 <strong>核心技能：</strong>详解 DAX 核心函数 (CALCULATE, 时间智能)、数据清洗技巧及可视化图表选择指南。
                 </p>
                 <div class="flex items-center text-sm text-primary-600 font-medium hover:underline">
                     <i data-lucide="bar-chart-3" class="w-4 h-4 mr-1"></i> 查看/下载 PDF 笔记
                 </div>
             </a>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a href="https://github.com/youhuan" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
+
+            <a href="./ml_finance_notes.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-blue-500">
                 <div class="flex justify-between items-start mb-2">
-                    <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-1 rounded mb-2 inline-block">VBA</span>
-                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-purple-500 transition"></i>
+                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded inline-block">AI & 财务</span>
+                    <i data-lucide="brain-circuit" class="w-4 h-4 text-gray-300 group-hover:text-blue-500 transition"></i>
                 </div>
-                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">VBA 实战：如何遍历文件夹合并100个Excel表</h4>
-                <p class="text-sm text-gray-500 mb-4 line-clamp-3">记录了使用 Dir 函数和 Loop 循环实现多工作簿合并的代码逻辑，适用于财务月结场景。</p>
-                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
-                <a href="./vba_snippets.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-purple-500">
+                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">
+                    机器学习在财务领域的应用探索
+                </h4>
+                <p class="text-sm text-gray-500 mb-2 line-clamp-2">
+                    🤖 <strong>前沿思考：</strong>浅谈机器学习 (ML) 如何赋能现代财务，探讨算法在预测、风控及自动化中的落地场景。
+                </p>
+                <div class="flex items-center text-sm text-primary-600 font-medium hover:underline">
+                    <i data-lucide="file-text" class="w-4 h-4 mr-1"></i> 阅读完整笔记 (PDF)
+                </div>
+            </a>
+
+            <a href="./social_media_notes.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-rose-500">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-bold text-rose-600 bg-rose-50 px-2 py-1 rounded inline-block">SNA & 文本挖掘</span>
+                    <i data-lucide="share-2" class="w-4 h-4 text-gray-300 group-hover:text-rose-500 transition"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">
+                    社交媒体分析与网络挖掘课堂笔记
+                </h4>
+                <p class="text-sm text-gray-500 mb-2 line-clamp-2">
+                    📱 <strong>商业分析课程：</strong>梳理了社会网络分析 (SNA) 的关键指标、图论基础以及文本情感分析的应用逻辑。
+                </p>
+                <div class="flex items-center text-sm text-primary-600 font-medium hover:underline">
+                    <i data-lucide="file-text" class="w-4 h-4 mr-1"></i> 阅读课堂笔记 (PDF)
+                </div>
+            </a>
+
+            <a href="./vba_snippets.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block border-l-4 border-l-purple-500">
                 <div class="flex justify-between items-start mb-2">
                     <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-1 rounded inline-block">VBA 兵器库</span>
                     <i data-lucide="download" class="w-4 h-4 text-gray-300 group-hover:text-purple-500 transition"></i>
                 </div>
                 <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">
-                    常用 VBA 通用代码模块 (30+个)
+                    常用 VBA 通用代码模块
                 </h4>
-                <p class="text-sm text-gray-500 mb-4 line-clamp-3">
-                    🔥 <strong>高频工具合集：</strong>包含批量创建/删除工作表、工作簿拆分与合并、图片批量插入与对齐、自动解除密码保护等通用模块。复制即用，极大提升开发效率。
+                <p class="text-sm text-gray-500 mb-2 line-clamp-2">
+                    🔥 <strong>高频工具合集：</strong>包含批量创建工作表、合并工作簿、图片处理等30+个通用模块。复制即用，极大提升开发效率。
                 </p>
                 <div class="flex items-center text-sm text-primary-600 font-medium hover:underline">
-                    <i data-lucide="file-code" class="w-4 h-4 mr-1"></i> 查看/下载代码文件
+                    <i data-lucide="file-code" class="w-4 h-4 mr-1"></i> 下载代码文件
                 </div>
-            </a>
             </a>
 
-            <a href="#" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
+            <a href="./financial_text_mining_thesis.pdf" target="_blank" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group flex flex-col h-full border-l-4 border-l-pink-500">
                 <div class="flex justify-between items-start mb-2">
-                    <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded mb-2 inline-block">Power Query</span>
-                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-green-500 transition"></i>
+                    <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-1 rounded inline-block">毕业设计</span>
+                    <i data-lucide="graduation-cap" class="w-4 h-4 text-gray-300 group-hover:text-pink-500 transition"></i>
                 </div>
-                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">Power Query M语言：处理不规范的费用报销单</h4>
-                <p class="text-sm text-gray-500 mb-4 line-clamp-3">解决了表头多行、合并单元格等常见的财务Excel数据清洗难题。</p>
-                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
-            </a>
-
-            <a href="#" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
-                <div class="flex justify-between items-start mb-2">
-                    <span class="text-xs font-bold text-yellow-600 bg-yellow-50 px-2 py-1 rounded mb-2 inline-block">Python</span>
-                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-yellow-500 transition"></i>
+                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">
+                    MD&A 文本信息在盈利预测中的增量价值研究
+                </h4>
+                <p class="text-sm text-gray-500 mb-4 line-clamp-3 flex-grow">
+                    📚 <strong>实证研究：</strong>基于 2012-2024 年 A 股机械制造业数据，对比 FinBERT 语义向量与传统财务指标。利用 EBM 可解释性模型与稳健性分析发现，MD&A 文本在当前框架下对 ROA/ROE 预测缺乏稳定的增量贡献。
+                </p>
+                <div class="mt-auto flex flex-col gap-2">
+                    <div class="flex items-center text-sm text-primary-600 font-medium hover:underline">
+                        <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 阅读论文摘要 (投稿准备中，暂时没放)
+                    </div>
+                    <span class="text-xs text-gray-400 flex items-center">
+                        <i data-lucide="code-2" class="w-3 h-3 mr-1"></i> 含 Python 代码与 EBM 分析结果
+                    </span>
                 </div>
-                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">Python Pandas：库存库龄分析的高级筛选</h4>
-                <p class="text-sm text-gray-500 mb-4 line-clamp-3">比 Excel 透视表更灵活的筛选方式，快速计算各库龄段的库存金额占比。</p>
-                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
             </a>
-
-             <a href="#" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
-                <div class="flex justify-between items-start mb-2">
-                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded mb-2 inline-block">应收账款</span>
-                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-blue-500 transition"></i>
-                </div>
-                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">DSO (应收账款周转天数) 的计算与优化策略</h4>
-                <p class="text-sm text-gray-500 mb-4 line-clamp-3">关于如何通过财务数据分析识别逾期客户并制定催收优先级的思考。</p>
-                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
-            </a>
-
-             <a href="#" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group block">
-                <div class="flex justify-between items-start mb-2">
-                    <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-1 rounded mb-2 inline-block">毕业设计</span>
-                    <i data-lucide="external-link" class="w-4 h-4 text-gray-300 group-hover:text-pink-500 transition"></i>
-                </div>
-                <h4 class="text-lg font-bold mb-2 group-hover:text-primary-600 transition">毕业设计开题：大数据背景下的财务风险管控</h4>
-                <p class="text-sm text-gray-500 mb-4 line-clamp-3">记录了毕业设计的选题思路、文献综述整理以及初步的模型构建框架。</p>
-                <span class="text-sm text-primary-600 font-medium hover:underline">阅读全文 →</span>
-            </a>
-        </div>
     </div>
 
 </main>
