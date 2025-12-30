@@ -120,19 +120,16 @@
 
             <div class="lg:col-span-6 flex flex-col gap-6">
                 <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                    <div class="aspect-video bg-gray-100 relative group cursor-pointer">
-                        <img src="https://placehold.co/800x450/e0e7ff/4f46e5?text=Video+Intro" class="w-full h-full object-cover opacity-90 transition group-hover:opacity-100">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg">
-                                <i data-lucide="play" class="w-8 h-8 text-white fill-current ml-1"></i>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white font-medium drop-shadow-md bg-black/30 px-3 py-1 rounded-full text-sm backdrop-blur-sm">
-                            👋 30秒了解我
-                        </div>
+                    <div class="aspect-video bg-black relative group">
+                        <video 
+                            class="w-full h-full object-contain focus:outline-none" 
+                            controls
+                            preload="metadata">
+                            <source src="./intro_video.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
                     <h3 class="text-xl font-bold text-gray-900 mb-5 flex items-center gap-2">
                         <i data-lucide="user" class="w-5 h-5 text-teal-600"></i> 个人简介
@@ -155,7 +152,7 @@
                                 工具与编程
                             </h4>
                             <p class="text-gray-600 text-sm leading-relaxed pl-3.5 border-l-2 border-gray-100">
-                                SAP、Excel（透视表/Power Query/ VBA）、Power BI、Python（数据清洗/情绪分析/机器学习）、影刀 RPA
+                                SAP、Excel（透视表/Power Query/ VBA）、Power BI、Python（数据清洗/情绪分析/机器学习）
                             </p>
                         </div>
 
@@ -283,44 +280,30 @@
         <div class="flex flex-wrap justify-center gap-2 mb-8">
             <button onclick="filterProjects('all')" class="filter-btn active px-5 py-2 rounded-full text-sm font-medium transition shadow-sm border border-transparent bg-primary-600 text-white">全部</button>
             <button onclick="filterProjects('finance')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm border border-gray-200 bg-white text-gray-600 hover:text-primary-600">财务分析</button>
-            <button onclick="filterProjects('data')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm border border-gray-200 bg-white text-gray-600 hover:text-primary-600">数据工具</button>
+            <button onclick="filterProjects('data')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm border border-gray-200 bg-white text-gray-600 hover:text-primary-600">数据技术</button>
             <button onclick="filterProjects('grad')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition shadow-sm border border-gray-200 bg-white text-gray-600 hover:text-primary-600">毕业设计</button>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
-            <div class="project-card group" data-category="data finance">
+            
+            <div class="project-card group" data-category="finance">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
                     <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/fffbeb/d97706?text=Cost+Structure+BI" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="https://placehold.co/600x400/fffbeb/d97706?text=Cost+Analysis" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                         <div class="absolute top-4 left-4 bg-yellow-500 text-white text-xs px-2 py-1 rounded shadow-sm">Power BI</div>
                         <div class="absolute top-4 left-20 bg-red-500 text-white text-xs px-2 py-1 rounded shadow-sm">成本控制</div>
                     </div>
                     <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
-                            制造业成本结构可视化分析仪表盘
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            针对传统成本报表数据维度单一的问题，搭建动态 BI 看板。实现对料、工、费的结构拆解与趋势追踪，支持按“车间-产品-时间”多维度下钻，快速定位成本异常波动根源。
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据建模</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">DAX</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">可视化</span>
-                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">制造业成本结构可视化分析仪表盘</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">针对传统成本报表数据维度单一的问题，搭建动态 BI 看板。实现对料、工、费的结构拆解与趋势追踪。</p>
                     </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
-                        <a href="./cost_dashboard_demo.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
-                            <i data-lucide="presentation" class="w-4 h-4 mr-2"></i> 查看 Dashboard 演示 (PDF)
-                        </a>
-                        
-                        <a href="./cost_analysis.pdf" class="text-gray-500 font-medium text-sm hover:text-primary-600 transition flex items-center">
-                            <i data-lucide="download" class="w-4 h-4 mr-2"></i> 下载步骤
-                        </a>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="./cost_dashboard_demo.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center"><i data-lucide="presentation" class="w-4 h-4 mr-2"></i> 查看演示 (PDF)</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="project-card group" data-category="data finance">
+
+            <div class="project-card group" data-category="finance">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
                     <div class="h-48 bg-gray-100 relative overflow-hidden">
                         <img src="https://placehold.co/600x400/fff7ed/ea580c?text=Sales+Analytics" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
@@ -328,204 +311,62 @@
                         <div class="absolute top-4 left-20 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-sm">销售分析</div>
                     </div>
                     <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
-                            产品销售多维度分析与数据建模实战
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            基于百万行级销售流水数据，完成从 ETL 清洗、数据建模到可视化的全流程。运用 DAX 实现同比/环比、帕累托分析及客户留存率计算，并通过动态交互仪表盘辅助制定营销策略。
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">DAX 建模</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据清洗</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">商业洞察</span>
-                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">产品销售多维度分析与数据建模实战</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">基于百万行级销售流水数据，完成从 ETL 清洗、数据建模到可视化的全流程。运用 DAX 实现同比/环比及客户留存率计算。</p>
                     </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
-                        <a href="./sales_project_report.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
-                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看分析思路与报表演示 (PDF)
-                        </a>
-                        
-                        <a href="./sales_analysis.pbix" class="text-gray-500 font-medium text-sm hover:text-primary-600 transition flex items-center">
-                            <i data-lucide="download" class="w-4 h-4 mr-2"></i> 下载 .pbix 源文件
-                        </a>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="./sales_project_report.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center"><i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看报告 (PDF)</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card group" data-category="finance data">
+
+            <div class="project-card group" data-category="finance">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
                     <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/fee2e2/b91c1c?text=AR+Risk+Management" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="https://placehold.co/600x400/fee2e2/b91c1c?text=AR+Risk" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                         <div class="absolute top-4 left-4 bg-red-600 text-white text-xs px-2 py-1 rounded shadow-sm">风险预警</div>
                         <div class="absolute top-4 left-20 bg-yellow-500 text-white text-xs px-2 py-1 rounded shadow-sm">Power BI</div>
                     </div>
                     <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
-                            应收账款(AR)风险预警与账龄分析模型
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            针对企业回款周期长、坏账风险高的问题，搭建动态风控看板。利用 DAX 计算 DSO (销售变现天数) 及逾期账龄分布，自动标记高风险客户，辅助财务部门精准制定催收策略。
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">账龄分析</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">DSO计算</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">风控模型</span>
-                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">应收账款(AR)风险预警与账龄分析模型</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">搭建动态风控看板。利用 DAX 计算 DSO 及逾期账龄分布，自动标记高风险客户，辅助精准制定催收策略。</p>
                     </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
-                        <a href="./ar_risk_report.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
-                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看业务逻辑与看板演示 (PDF)
-                        </a>
-                        
-                        <a href="./ar_risk_analysis.pbix" class="text-gray-500 font-medium text-sm hover:text-primary-600 transition flex items-center">
-                            <i data-lucide="download" class="w-4 h-4 mr-2"></i> 下载 .pbix 源文件
-                        </a>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="./ar_risk_report.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center"><i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看演示 (PDF)</a>
                     </div>
                 </div>
             </div>
 
-           <div class="project-card group" data-category="data finance">
+            <div class="project-card group" data-category="finance">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
                     <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/e0e7ff/4338ca?text=NLP+Project" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-indigo-600 text-white text-xs px-2 py-1 rounded shadow-sm">课程作业</div>
-                        <div class="absolute top-4 left-20 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">Python NLP</div>
-                    </div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
-                            挖掘shopee reviews文本分析并预测的研究
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            商业分析课程期末项目。利用 Python 对网站评论进行文本清洗与情感分析，探索和挖掘并分析文本。
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据挖掘</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">情感分析</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">回归建模</span>
-                        </div>
-                    </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
-                        <a href="./text_mining_thesis.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
-                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看项目报告 (PDF)
-                        </a>
-                        
-                        <a href="./project_assets.zip" class="text-indigo-600 font-medium text-sm hover:underline flex items-center transition">
-                            <i data-lucide="package" class="w-4 h-4 mr-2"></i> 下载代码与数据包 (ZIP)
-                        </a>
-                        
-                        <div class="text-xs text-gray-400 mt-1 pl-6">
-                            含 Python 源码、清洗后数据及流程图
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card group" data-category="data finance">
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
-                    <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=VBA+Automation" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">VBA</div>
-                        <div class="absolute top-4 left-16 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-sm">费用分析</div>
-                    </div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">月度费用报表一键自动生成工具</h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">编写 Excel VBA 宏，自动抓取多部门费用明细，进行分类汇总并生成对比图表。将原需 4 小时的人工制表时间缩短至 5 分钟。</p>
-                        <div class="flex gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Excel</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Macro</span>
-                        </div>
-                    </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
-                        <a href="./vba_expense_demo.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center group-hover:translate-x-1 transition-transform">
-                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看运行效果演示 (PDF)
-                        </a>
-                        
-                        <a href="./vba_expense_code.pdf" target="_blank" class="text-gray-500 font-medium text-sm hover:text-primary-600 transition flex items-center group-hover:translate-x-1 transition-transform delay-75">
-                            <i data-lucide="code" class="w-4 h-4 mr-2"></i> 查看完整 VBA 代码
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card group" data-category="data finance">
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
-                    <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Inventory+AR+Aging+VBA" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="库存与应收账龄VBA">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Inventory+VBA" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                         <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">VBA</div>
                         <div class="absolute top-4 left-16 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-sm">联合报表</div>
                     </div>
                     <div class="p-6 flex-grow">
                         <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">库存与应收账龄联合报表自动生成</h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            编写 Excel VBA 宏，自动抓取并清洗 SAP 导出的库存余额表与应收账款账龄表。通过关键字段匹配，将两表数据合并，一键生成包含库存库龄与 AR 账龄的综合分析透视表，大幅提高月结与运营分析效率。
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Excel VBA</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据清洗</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">透视表自动化</span>
-                        </div>
-                    </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-3">
-                        <a href="./vba_report.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
-                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看项目演示文档 (PDF)
-                        </a>
-                        
-                        <a href="./vba_code.pdf" target="_blank" class="text-gray-500 font-medium text-sm hover:text-primary-600 transition flex items-center">
-                            <i data-lucide="code" class="w-4 h-4 mr-2"></i> 查看核心代码逻辑 (VBA)
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            
-
-            
-
-            <div class="project-card group" data-category="grad data">
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
-                    <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Graduation+Design" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">毕业设计</div>
-                        <div class="absolute top-4 left-20 bg-teal-600 text-white text-xs px-2 py-1 rounded shadow-sm">机器学习</div>
-                    </div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">基于机器学习模型研究文本信号对盈利预测的增量作用</h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">商业分析硕士毕业项目。通过 Python 对财报文本进行清洗与情绪分析，探究非财务文本信息能否为传统财务指标模型提供增量的预测价值。</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">机器学习</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据清洗</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">情绪分析</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">Python</span>
-                        </div>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">编写 Excel VBA 宏，自动抓取并清洗 SAP 数据，一键生成综合分析透视表，大幅提高月结与运营分析效率。</p>
                     </div>
                     <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
-                        <a href="#" class="text-primary-600 font-medium text-sm hover:underline flex items-center">查看论文摘要（投稿准备中，暂时不放） <i data-lucide="file-text" class="w-4 h-4 ml-1"></i></a>
+                        <a href="./vba_report.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center"><i data-lucide="code" class="w-4 h-4 mr-2"></i> 查看逻辑 (VBA)</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card group" data-category="data">
+
+            <div class="project-card group" data-category="finance">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
                     <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/ccfbf1/0f766e?text=Standardization+Case" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="https://placehold.co/600x400/ccfbf1/0f766e?text=ETL+Case" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                         <div class="absolute top-4 left-4 bg-teal-600 text-white text-xs px-2 py-1 rounded shadow-sm">Power Query</div>
                         <div class="absolute top-4 left-24 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-sm">实战案例</div>
                     </div>
                     <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
-                            销售/费用报表标准化清洗实战
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            针对业务部门提供的“合并单元格、多层表头”等非标准报表，建立标准 ETL 清洗流。利用逆透视 (Unpivot) 与填充技术，将二维报表一键转换为一维数据源。
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">ETL</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">数据清洗</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">M语言</span>
-                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">销售/费用报表标准化清洗实战</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">针对非标准报表，建立标准 ETL 清洗流。利用逆透视 (Unpivot) 与填充技术，将二维报表一键转换为一维数据源。</p>
                     </div>
                     <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
-                        <a href="./pq_standardization_case.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
-                            查看项目案例 (PDF) <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                        </a>
+                        <a href="./pq_standardization_case.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center"><i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i> 查看项目 (PDF)</a>
                     </div>
                 </div>
             </div>
@@ -533,27 +374,90 @@
             <div class="project-card group" data-category="data">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
                     <div class="h-48 bg-gray-100 relative overflow-hidden">
-                        <img src="https://placehold.co/600x400/e0f2fe/0369a1?text=Auto-Clean+Template" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="https://placehold.co/600x400/e0e7ff/4338ca?text=Shopee+NLP" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-indigo-600 text-white text-xs px-2 py-1 rounded shadow-sm">Python</div>
+                        <div class="absolute top-4 left-20 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">数据挖掘</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">挖掘shopee reviews文本分析并预测的研究</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">利用 Python 对网站评论进行文本清洗与情感分析，探索并预测商业文本中的潜在规律。</p>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="./text_mining_thesis.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center"><i data-lucide="file-text" class="w-4 h-4 mr-2"></i> 查看报告 (PDF)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group" data-category="data">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/e0f2fe/0369a1?text=Auto+Clean" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                         <div class="absolute top-4 left-4 bg-teal-600 text-white text-xs px-2 py-1 rounded shadow-sm">Power Query</div>
                         <div class="absolute top-4 left-24 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">效率工具</div>
                     </div>
                     <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">
-                            通用自动化清洗模板开发
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            构建 "Input-Process-Output" 自动化模型。无需修改代码，只需粘贴新数据并刷新，即可自动适配月份列扩展与格式变化，实现月度数据处理的“零手动”。
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">模板开发</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">自动化</span>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">流程优化</span>
-                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">通用自动化清洗模板开发</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">构建 "Input-Process-Output" 模型。只需粘贴新数据即可自动适配格式变化，实现月度数据处理“零手动”。</p>
                     </div>
                     <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
-                        <a href="./pq_template_guide.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
-                            查看模板制作指南 (PDF) <i data-lucide="file-text" class="w-4 h-4 ml-1"></i>
+                        <a href="./pq_template_guide.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center"><i data-lucide="file-text" class="w-4 h-4 ml-1"></i> 制作指南 (PDF)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group" data-category="data">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/f3f4f6/374151?text=VBA+Automation" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">VBA</div>
+                        <div class="absolute top-4 left-16 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow-sm">费用分析</div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">月度费用报表一键自动生成工具</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">编写 Excel VBA 宏，自动抓取多部门费用明细，将 4 小时的人工制表时间缩短至 5 分钟。</p>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+                        <a href="./vba_expense_demo.pdf" target="_blank" class="text-primary-600 font-medium text-sm hover:underline flex items-center"><i data-lucide="presentation" class="w-4 h-4 mr-2"></i> 查看演示 (PDF)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group" data-category="grad">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-lift flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Masters+Thesis+Project" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="硕士毕业论文项目">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow-sm">硕士毕设</div>
+                        <div class="absolute top-4 left-20 bg-teal-600 text-white text-xs px-2 py-1 rounded shadow-sm">机器学习</div>
+                    </div>
+
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition">基于混合模型的盈利预测增量价值研究</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            <strong>研究概况：</strong>构建结合预测精度与可解释性的黑白盒混合框架，利用 23 项财务指标及 FinBERT 语义嵌入对 A 股机械制造业进行盈利方向预测 [cite: 1, 9, 25]。
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">EBM模型</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">FinBERT 嵌入</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded border border-gray-200">文本分析</span>
+                        </div>
+
+                        <div class="bg-primary-50 p-3 rounded-lg border border-primary-100 mb-4">
+                            <h4 class="text-xs font-bold text-primary-800 mb-2 flex items-center gap-1">
+                                <i data-lucide="bar-chart-2" class="w-3 h-3"></i> 关键实验结论
+                            </h4>
+                            <ul class="text-[11px] text-primary-700 space-y-1">
+                                <li>• <strong>模型表现：</strong>EBM 在 ROA 预测中达到 60.3% PR-AUC，显著优于传统逻辑回归。</li>
+                                <li>• <strong>信息贡献：</strong>财务指标贡献了 53-64% 的全局重要性，文本信息在 Tobin's Q 预测中表现出增量作用。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto flex flex-col gap-2">
+                        <a href="./毕业设计介绍（方法论+实验设计）.pptx" class="text-primary-600 font-medium text-sm hover:underline flex items-center">
+                            <i data-lucide="presentation" class="w-4 h-4 mr-2"></i> 查看详细方法论与实验设计 (PPTX)
                         </a>
+                        <span class="text-[10px] text-gray-400 italic">导师：Dr. Ng Wei Chien | 马来西亚理科大学 (USM) [cite: 4]</span>
                     </div>
                 </div>
             </div>
@@ -632,7 +536,7 @@
                         <span class="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></span> 工具与编程
                     </h4>
                     <p class="text-gray-600 text-sm leading-relaxed pl-3.5 border-l-2 border-gray-100">
-                        SAP、Excel（透视表/Power Query/ VBA）、Power BI、Python（数据清洗/情绪分析/机器学习）、影刀 RPA
+                        SAP、Excel（透视表/Power Query/ VBA）、Power BI、Python（数据清洗/情绪分析/机器学习）
                     </p>
                 </div>
                  <div>
